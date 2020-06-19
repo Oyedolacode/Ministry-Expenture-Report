@@ -1,0 +1,79 @@
+
+
+html   {
+    font-family: 'Lato', sans-serif;
+}
+
+
+.green{
+    color: #00945E;
+    font-size: 28px;
+
+}
+
+
+.btn-default{
+    background: #00945E;
+    color: #FFFFFF;
+    width: 20%;
+    margin-left: 2%;
+}
+
+
+.hang-right{
+    float: right;
+    margin-top: 0;
+
+}
+
+.right{
+    align-content: right;
+    padding-left: 40%;
+}
+
+.top{
+    width: 100%;
+}
+
+.ministry-table {
+    /*display: flex;*/
+    position: relative;
+    margin-top: 70%; 
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+#container > p {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 42px;
+}
+
+#table {
+    
+    width: 1228px;
+    align-items: center;
+
+}
+
+thead {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.table table-light {
+    stroke: #00945E;
+    font-size: 16px;
+    line-height: 19px;
+    align-self: center;
+}
+
+.ministry {
+    color: #00945E;
+}
+
+.company {
+    color: #6765EC;
+}
