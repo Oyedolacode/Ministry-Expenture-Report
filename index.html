@@ -5,15 +5,21 @@
 
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
- <link rel="stylesheet" type="text/css" href="Style.css">
+
 
 
  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
+meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ministry Expenditure</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </head>
 
-	   <title>Ministry Expenditure page</title>
+	 
 
 
 <body>
@@ -24,6 +30,47 @@
         <p>The government awards funds to ministries for their functions. Use our Ministries ExpendiureProfile to get a better understanding of how ministries spend congressional funding to carry out their programs, projects, and activities.</p>>
     </div>
 
+	<div class="expenditure_graph_body">
+		<div class="expenditure_graph_title">Graph Representation of Top 10 Ministry Expenditure</div>
+		<div class="expenditure_graph">
+			<canvas id="graph_canvas"></canvas>
+			<div class="graph_filter"><span>Filter</span><i class="fa fa-filter"></i></div>
+		</div>
+		<div class="graph_Xaxis_container">
+			<ul class="graph_Xaxis">
+				<li style="background: #1F2430;"></li>
+				<li style="background: #6765EC"></li>
+				<li style="background: #42E8E0"></li>
+				<li style="background: #2196C4;"></li>
+				<li style="background: #005D3B;"></li>
+				<li style="background: #004583;"></li>
+				<li style="background: #FF0000;"></li>
+				<li style="background: #BC0A0A;"></li>
+				<li style="background: #9EFF00;"></li>
+				<li style="background: #423E85;"></li>
+			</ul>
+			<div class="graph_Xaxis_title">Top 10 Ministries With Most Expenditure</div>
+			<div class="graph_Yaxis_title">Amount Expenditure (Billions)</div>
+			<div class="graph_date">20th May 2020</div>
+		</div>
+		
+		<ul class="list_plotted">
+			<p>Key</p>
+			<span>Ministry of Education</span><li style="background: #1F2430;"></li>
+			<span>Ministry of Education</span><li style="background: #6765EC;"></li>
+			<span>Ministry of Education</span><li style="background: #42E8E0;"></li>
+			<span>Ministry of Education</span><li style="background: #2196C4;"></li>
+			<span>Ministry of Education</span><li style="background: #005D3B;"></li>
+			<span>Ministry of Education</span><li style="background: #004583;"></li>
+			<span>Ministry of Education</span><li style="background: #FF0000;"></li>
+			<span>Ministry of Education</span><li style="background: #BC0A0A;"></li>
+			<span>Ministry of Education</span><li style="background: #9EFF00;"></li>
+			<span>Ministry of Education</span><li style="background: #423E85;"></li>
+		</ul>
+	</div>
+
+	
+	
 <section class="ministry-table">
 
     <div id="container">
@@ -166,7 +213,8 @@
     
     
 
- 	
+ 	<script type="text/javascript" src="ministry_expenditure.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
