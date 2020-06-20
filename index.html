@@ -49,8 +49,14 @@
         <div class="graph_with_label">
           <div class="expenditure_graph">
             <canvas id="graph_canvas"></canvas>
-            <div class="graph_filter">
-              <span>Filter</span><i class="fa fa-filter"></i>
+            <div class="dropdown">
+              <div onclick="myFunction()" class="dropbtn graph_filter"><span>Filter</span><i class="fa fa-filter"></i></div>
+              <div id="myDropdown" class="dropdown-content">
+                 <ul class="filter_box_cover">
+                    <li class="filter_box_item">Highest to lowest Amount</li>
+                    <li class="filter_box_item">Lowest to Highest Amount</li>
+                 </ul>
+              </div>
             </div>
           </div>
           <div class="graph_Xaxis_container">
