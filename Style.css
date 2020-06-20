@@ -9,8 +9,8 @@ body {
 .hero {
   position: relative;
   top: 0;
-  width: 100vw;
-  margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 .hero-text {
   display: flex;
@@ -53,10 +53,10 @@ body {
 
 .expenditure_graph_body {
   width: 100%;
-  height: 600px;
+  height: 700px;
   background: #f6f6f6;
   text-align: center;
-  padding-top: 40px;
+  padding: 3rem 0;
   position: relative;
   margin-bottom: 2rem;
   overflow-y: scroll;
@@ -77,6 +77,9 @@ body {
   float: left;
   order: 1;
   position: relative;
+}
+.expenditure_graph_content {
+  margin: auto;
 }
 #graph_canvas {
   width: 80% !important;
@@ -105,7 +108,7 @@ body {
   width: 850px;
   height: 40px;
   background: #f6f6f6;
-  top: 535px;
+  top: 500px;
   left: 80px;
 }
 .graph_Xaxis {
@@ -119,7 +122,7 @@ body {
   width: 20px;
   height: 100%;
   float: left;
-  margin-right: 6.5%;
+  margin-right: 6.8%;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0.1, 0.3);
 }
 .graph_Xaxis_title {
@@ -134,7 +137,6 @@ body {
   left: -150px;
 }
 .list_plotted {
-  width: 200px;
   float: left;
   text-align: left;
   margin-left: 0px;
@@ -149,8 +151,8 @@ body {
 }
 .list_plotted span {
   float: right;
-  margin-right: 15px;
-  margin-top: 3px;
+  margin-left: 2.5rem;
+  margin-top: -4px;
 }
 .graph_date {
   font-size: 20px;
@@ -170,20 +172,38 @@ body {
     top: -260px;
   }
   .graph_Xaxis_container {
-    top: 435px;
+    top: 400px;
     width: 600px;
   }
   .graph_Xaxis li {
-    margin-right: 5%;
+    margin-right: 5.4%;
   }
   .graph_Yaxis_title {
     top: -150px;
   }
   .expenditure_graph_body {
-    height: 550px;
+    height: 700px;
   }
 }
+
+.expenditure_graph_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.graph_with_label {
+  position: relative;
+}
 @media (max-width: 921px) {
+  .expenditure_graph_content {
+    display: block;
+    position: initial;
+  }
+  .graph_with_label {
+    position: initial;
+  }
   .expenditure_graph_body {
     height: 900px;
   }
@@ -196,7 +216,6 @@ body {
     width: 700px;
   }
   .list_plotted {
-    width: 200px !important;
     position: absolute;
     left: 30px;
     float: none;
@@ -230,8 +249,14 @@ body {
   }
 }
 @media (max-width: 700px) {
+  .expenditure_graph_content {
+    flex-direction: column;
+  }
   .expenditure_graph_title {
     font-size: 20px;
+  }
+  .expenditure_graph_body {
+    height: 825px;
   }
   .expenditure_graph {
     width: 450px !important;
@@ -251,7 +276,7 @@ body {
     margin-left: 10px;
   }
   .graph_Xaxis li {
-    margin-right: 5.5%;
+    margin-right: 6.5%;
   }
   .graph_Yaxis_title {
     left: -82px;
@@ -286,6 +311,7 @@ body {
   }
   .expenditure_graph_body {
     text-align: left;
+    height: 700px;
   }
   .graph_Xaxis_container {
     width: 90%;
@@ -315,7 +341,7 @@ body {
     margin-right: 15px;
   }
 }
-@media (max-width: 921px) {
+@media (max-width: 500px) {
   .list_plotted {
     top: 300px;
   }
