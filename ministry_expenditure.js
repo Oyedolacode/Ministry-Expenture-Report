@@ -87,6 +87,7 @@ for (let item of data) {
   table.appendChild(row);
 }
 
+let newData = [50000000, 75000000, 35000000, 47000000, 65000000, 20000000, 90000000, 25000000, 50000000, 25000000]
 const ctx = document.getElementById("graph_canvas").getContext("2d");
 let chart = new Chart(ctx, {
   // The type of chart we want to create
@@ -104,7 +105,7 @@ let chart = new Chart(ctx, {
         pointHoverBackgroundColor: "#00945E",
         pointHoverBorderColor: "#00945E",
         lineTension: 0,
-        data: data.map((item) => item.amount),
+        data: newData,
         backgroundColor: "white",
         borderColor: "#00945E",
         borderWidth: 1,
@@ -112,6 +113,7 @@ let chart = new Chart(ctx, {
       },
     ],
   },
+  
 
   // Configuration options go here
   options: {
@@ -154,6 +156,10 @@ let chart = new Chart(ctx, {
   },
 });
 
+//   console.log(chart.data.datasets[0].data.sort(function(a, b) {
+//   return b - a;
+// }))
+
 data
   .sort((m1, m2) => m1.amount - m2.amount)
   .slice(0, 10)
@@ -164,20 +170,37 @@ data
 
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+let button = document.querySelector("#High-to-low")
+let all = document.querySelector("#all")
+
+function myFunction(value) {
+  if(value == 'all') {   
+     chart.data.datasets[0].data  = newData
+     chart.update()
+
+ } else if(value == 'highLow') {
+    chart.data.datasets[0].data = newData.sort((a, b) => {return a - b})
+    chart.update()
+    return
+ } else {
+   chart.data.datasets[0].data = newData.sort((a, b) => {return b - a})
+    chart.update()
+    return
+
+ }
 }
 
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+
+//       }
+//     }
+//   }
+// }
