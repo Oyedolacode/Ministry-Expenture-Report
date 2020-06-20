@@ -56,106 +56,9 @@ body{
     font-size: 1.2rem;
   }
 }
-
-media (max-width: 500px) {
-  .list_plotted {
-    top: 300px;
-  }
-}
 .green {
 }
 
-.btn-default {
-  background: #00945e !important;
-  color: #ffffff;
-  width: 20%;
-  margin-left: 2%;
-}
-
-.hang-right {
-  float: right;
-  margin-top: 0;
-}
-
-.right {
-  align-content: right;
-  padding-left: 40%;
-}
-
-.top {
-  width: 100%;
-}
-
-.ministry-table {
-  /*display: flex;*/
-  position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
-  max-width: 100%;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-}
-
-#container > p {
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 42px;
-}
-
-#table {
-  width: 1228px;
-  align-items: center;
-}
-
-thead {
-  background-color: #ffffff;
-  color: black;
-}
-
-.table table-light {
-  stroke: #00945e;
-  font-size: 16px;
-  line-height: 19px;
-  align-self: center;
-}
-
-.ministry {
-  color: #00945e;
-}
-
-.company {
-  color: #6765ec;
-}
-
-.ministry-table {
-  box-shadow: -1px -2px 2px rgba(0, 0, 0, 0.1), 1px 2px 2px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-}
-.table-data {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0.5rem;
-}
-
-.table-name {
-  display: inline-flex;
-  color: #00945e;
-  font-size: 28px;
-}
-
-.table-control span:first-of-type {
-  margin-right: 1em;
-  font-size: medium;
-}
-
-.table-control-span {
-  display: inline-block;
-}
-.table-control button {
-  width: 100%;
-  padding: 0.5rem 1rem;
-}
 .expenditure_graph_body{
 	width: 100%;
 	height: 620px;
@@ -221,7 +124,7 @@ thead {
 	width: 20px;
 	height: 100%;
 	float: left;
-	margin-right: 6.5%;
+	margin-right: 6.8%;
 	box-shadow: 0px 2px 4px 0px rgba(0,0,0.1,0.3);
 }
 .graph_Xaxis_title{
@@ -270,6 +173,86 @@ thead {
 	top: 5px;
 	left: 550px;
 }
+.filter_section{
+	width: 220px;
+    float: right;
+    margin-top: 15px;
+}
+.filter_section p{
+	float: left;
+	line-height: 55px;
+}
+
+.table_filter{
+	float: left;
+	order: 2;
+	color: white;
+	background: #00945E;
+	padding: 7px 15px;
+	font-size: 21px;
+	border-radius: 7px;
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0.1,0.3);
+	cursor: pointer;
+	margin-left: 5px;
+}
+.table_name{
+	font-size: 28px;
+	color: #00945e;
+	line-height: 75px;
+	float: left;
+}
+.table_title_container{
+	width: 100%;
+	padding: 0px 10px;
+	height: 75px;
+	overflow-y: hidden;
+}
+.ministry_list_body{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 10px;
+	height: auto;
+}
+.ministry_list_table{
+	width: 100%;
+	margin-top: 35px;
+	float: left;
+	box-shadow: -1px -2px 2px rgba(0, 0, 0, 0.1), 1px 2px 2px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+}
+.ministry_list_table div{
+	overflow-x:auto;
+}
+.ministry_list_table_header{
+	font-style: normal;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 30px;
+	color: #1F2430;
+	overflow-y: hidden;
+}	
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+td, th {
+  text-align: center !important;
+  padding: 8px;
+  width: 25%;
+  border-top: 1px solid #dee2e6;
+}
+tr:nth-child(even) {
+  background-color: #F6F6F6;
+}
+.ministry_twitter_handle_link{
+	color: #5472D8 !important;
+	cursor: pointer;
+	text-decoration: none;
+}
+.ministry_name{
+	color: #00945e;
+}
 @media (max-width: 1175px){
 	.expenditure_graph{
 		width: 600px !important;
@@ -285,7 +268,7 @@ thead {
 		width: 600px;
 	}
 	.graph_Xaxis li{
-		margin-right: 5%;
+		margin-right: 5.3%;
 	}
 	.graph_Yaxis_title{
 		top: 170px;
@@ -300,7 +283,7 @@ thead {
 }
 @media (max-width: 926px){
 	.expenditure_graph_body{
-		height: 900px;
+		height: 910px;
 	}
 	.expenditure_graph{
 		position: absolute;
@@ -385,25 +368,42 @@ thead {
 	.list_plotted span{
 		margin-top: -3px;
 	}
+	.filter_section{
+		width: 100px;
+		padding-left: 10px;
+		margin-top: 0px;
+	}
+	.filter_section p{
+		font-size: 10px;
+		margin-top: 10px !important;
+		padding: 0px !important;
+		line-height: 15px;
+		margin-left: 10px;
+	}
+	.table_filter{
+		padding: 2px 10px;
+	    font-size: 15px;
+	    margin-top: 0px;
+	}
 }
 @media (max-width: 550px){
 	.expenditure_graph{
 		width: 90%;
-		margin-left: 50px;
+		margin-left: 35px;
 		margin-top: 50px;
 	}
 	.expenditure_graph_body{
 		text-align: left;
-		height: 750px;
+		height: 785px;
 	}
 	.graph_Xaxis_container {
-		top: 330px;	
+		top: 325px;	
 		width: 100%;
 	}
 	.graph_Xaxis_title{
 		font-size: 12px;
-	    left: 70px;
-	    top: 210px;
+	    left: 90px;
+	    top: 205px;
 	}
 	.graph_Yaxis_title{
 		font-size: 12px;
@@ -414,20 +414,20 @@ thead {
 		height: 200px !important;
 	}
 	.graph_date{
-		left: 60%;
+		left: 65%;
 		font-size: 12px;
 	}
 	.expenditure_graph_title{
 		margin-left: 30px;
 	}
 	.graph_Xaxis{
-		width: 85%;
-		margin-left: 10%;
+		width: 90%;
+		margin-left: 7%;
 	}
 	.graph_Xaxis li{
 		width: 10px;
 		height: 10px;
-		margin-right: 5.5%;
+		margin-right: 5.7%;
 	}
 	.list_plotted li{
 		width: 10px;
@@ -440,5 +440,10 @@ thead {
 		top: 330px;
 		font-size: 12px;
 	}
-
+	.table_name{
+		font-size: 17px;
+	}
+	.table_title_container{
+		padding: 0px 2px;
+	}
 }
