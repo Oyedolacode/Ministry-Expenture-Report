@@ -49,8 +49,16 @@
         <div class="graph_with_label">
           <div class="expenditure_graph">
             <canvas id="graph_canvas"></canvas>
-            <div class="graph_filter">
-              <span>Filter</span><i class="fa fa-filter"></i>
+
+            <div class="dropdown">
+              <button class="btn dropbtn graph_filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter<i class="fa fa-filter"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" id="all" href="#" onclick="all()">All</a>
+                <a class="dropdown-item " id="highLow" href="#" onclick="myFunction(this.id)">Highest to lowest Amount</a>
+                <a class="dropdown-item" id="lowHigh" href="#" onclick="myFunction(this.id)">Lowest to Highest Amount</a>
+              </div>
             </div>
           </div>
           <div class="graph_Xaxis_container">

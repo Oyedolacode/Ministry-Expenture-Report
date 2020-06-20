@@ -51,11 +51,15 @@ body {
   }
 }
 
+button {
+
+}
+
 .expenditure_graph_body {
   width: 100%;
   height: 700px;
   background: #f6f6f6;
-  text-align: center;
+  /* text-align: center; */
   padding: 3rem 0;
   position: relative;
   margin-bottom: 2rem;
@@ -90,19 +94,53 @@ body {
 .graph_filter {
   float: left;
   order: 2;
-  margin-top: 0px;
   margin-left: 10px;
-  color: white;
+  color: white; 
   background: #00945e;
   padding: 7px 15px;
   font-size: 21px;
   border-radius: 7px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0.1, 0.3);
   cursor: pointer;
+  margin-bottom: 50px;
 }
 .fa-filter {
   margin-left: 5px;
 }
+.graph_filter:hover {
+  color: white; 
+  background: #00945e;
+}
+.graph_filter:focus {
+  color: white; 
+  background: #00945e;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1; 
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+color: black;
+padding: 12px 10px;
+text-decoration: none;
+display: block;
+margin-left: -40px ;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content li:hover {background-color: #ddd; cursor: pointer;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
 .graph_Xaxis_container {
   position: absolute;
   width: 850px;
@@ -247,6 +285,9 @@ body {
   .expenditure_graph_title {
     font-size: 25px;
   }
+  .dropbtn {
+    margin-top: -22rem;
+  }
 }
 @media (max-width: 700px) {
   .expenditure_graph_content {
@@ -339,6 +380,9 @@ body {
   .graph_filter {
     padding: 3px 5px;
     margin-right: 15px;
+  }
+  .dropbtn {
+    margin-top: -12.5rem;
   }
 }
 @media (max-width: 500px) {
