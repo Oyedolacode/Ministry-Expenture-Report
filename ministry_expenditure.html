@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ministry Expenditure</title>
+	<link rel="stylesheet" type="text/css" href="ministry_expenditure.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+<body>
+	<div class="expenditure_graph_body">
+		<div class="expenditure_graph_title">Graph Representation of Top 10 Ministry Expenditure</div>
+		<div class="expenditure_graph">
+			<canvas id="graph_canvas"></canvas>
+			<div class="graph_filter"><span>Filter</span><i class="fa fa-filter"></i></div>
+		</div>
+		<div class="graph_Xaxis_container">
+			<ul class="graph_Xaxis">
+				<li style="background: #1F2430;"></li>
+				<li style="background: #6765EC"></li>
+				<li style="background: #42E8E0"></li>
+				<li style="background: #2196C4;"></li>
+				<li style="background: #005D3B;"></li>
+				<li style="background: #004583;"></li>
+				<li style="background: #FF0000;"></li>
+				<li style="background: #BC0A0A;"></li>
+				<li style="background: #9EFF00;"></li>
+				<li style="background: #423E85;"></li>
+			</ul>
+			<div class="graph_Xaxis_title">Top 10 Ministries With Most Expenditure</div>
+			<div class="graph_Yaxis_title">Amount Expenditure (Billions)</div>
+			<div class="graph_date">20th May 2020</div>
+		</div>
+		
+		<ul class="list_plotted">
+			<p>Key</p>
+			<span>Ministry of Education</span><li style="background: #1F2430;"></li>
+			<span>Ministry of Education</span><li style="background: #6765EC;"></li>
+			<span>Ministry of Education</span><li style="background: #42E8E0;"></li>
+			<span>Ministry of Education</span><li style="background: #2196C4;"></li>
+			<span>Ministry of Education</span><li style="background: #005D3B;"></li>
+			<span>Ministry of Education</span><li style="background: #004583;"></li>
+			<span>Ministry of Education</span><li style="background: #FF0000;"></li>
+			<span>Ministry of Education</span><li style="background: #BC0A0A;"></li>
+			<span>Ministry of Education</span><li style="background: #9EFF00;"></li>
+			<span>Ministry of Education</span><li style="background: #423E85;"></li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="ministry_expenditure.js"></script>
+</html>
