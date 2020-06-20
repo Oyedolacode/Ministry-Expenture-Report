@@ -8,7 +8,9 @@ body {
 
 .hero {
   position: relative;
+  top: 0;
   width: 100vw;
+  margin-bottom: 1rem;
 }
 .hero-text {
   display: flex;
@@ -56,6 +58,8 @@ body {
   text-align: center;
   padding-top: 40px;
   position: relative;
+  margin-bottom: 2rem;
+  overflow-y: scroll;
 }
 .expenditure_graph_title {
   font-family: Lato;
@@ -343,10 +347,10 @@ body {
 .ministry-table {
   /*display: flex;*/
   position: relative;
-  margin-top: 70%;
   margin-left: 5%;
   margin-right: 5%;
   max-width: 100%;
+  text-align: center;
   font-family: "Lato", sans-serif;
 }
 
