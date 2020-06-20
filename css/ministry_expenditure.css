@@ -5,6 +5,11 @@ body {
 * {
   font-family: Lato, sans-serif;
 }
+header {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
 .ministry_title {
   width: 100%;
   background: #00945e;
