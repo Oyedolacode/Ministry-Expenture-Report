@@ -1,96 +1,195 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ministry Expenditure Report</title>
-	<link rel="stylesheet" type="text/css" href="css/ministry_expenditure.css">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-    crossorigin="anonymous"
-  />
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body>
-
-	<div class="ministry_title">Ministries Report</div>
-	<div class="hero">
-    <img class="hero-img"
-      src="https://user-images.githubusercontent.com/54963460/85075373-012b4a80-b1b6-11ea-88c4-b9ba4cfd22a0.png"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ministry Expenditure Report</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/ministry_expenditure.css"
     />
-    <div class="hero-text">
-      <h1>Ministry Expenditure Report</h1>
-      <p>
-        The government awards funds to ministries for their functions. Use our
-        Ministries ExpendiureProfile to get a better understanding of how
-        ministries spend congressional funding to carry out their programs,
-        projects, and activities.
-      </p>
-    </div>
-  </div>
-	<div class="expenditure_graph_body">
-		<div class="expenditure_graph_title">Graph Representation of Top 10 Ministry Expenditure</div>
-		<div class="expenditure_graph">
-			<canvas id="graph_canvas"></canvas>
-			<div class="graph_filter"><span>Filter</span><i class="fa fa-filter"></i></div>
-			<div class="graph_Xaxis_title">Top 10 Ministries With Most Expenditure</div>
-			<div class="graph_Yaxis_title">Amount Expenditure (Millions)</div>
-			<div class="graph_date">20th May 2020</div>
-		</div>
-		<div class="graph_Xaxis_container">
-			<ul class="graph_Xaxis">
-				<li style="background: #1F2430;"></li>
-				<li style="background: #6765EC;"></li>
-				<li style="background: #42E8E0;"></li>
-				<li style="background: #2196C4;"></li>
-				<li style="background: #005D3B;"></li>
-				<li style="background: #004583;"></li>
-				<li style="background: #FF0000;"></li>
-				<li style="background: #BC0A0A;"></li>
-				<li style="background: #9EFF00;"></li>
-				<li style="background: #423E85;"></li>
-			</ul>
-			
-		</div>
-		
-		<div class="list_plotted">
-			<p>Key</p>
-			<div class="list_box">
-				<div style="background: #1F2430;"></div><p>Ministry of Education</p>
-			</div>
-	 </div>
-  </div>
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/Group 380.svg" class="logo1" alt="logo" srcset="" />
+        <img src="img/Frame 384.svg" class="logo2" alt="logo" srcset="" />
+      </div>
 
-  <!--=========================begining of Ministry list section========================-->
-  <div class="ministry_list_body">
-    <div class="ministry_list_table">
-      <div class="table_title_container">
-       <div class="table_name">Ministry Expenditure</div>
-       <div class="filter_section">
-         <p>20th May 2020</p>
-         <div class="table_filter"><span>Filter</span><i class="fa fa-filter"></i></div>
-       </div>
-      </div>
-      <div>
-        <table class="main_table">
-          <tr class="ministry_list_table_header">
-            <th>Ministry</th>
-            <th>Minister</th>
-            <th>Twitter</th>
-            <th>Amount</th>
-          </tr>
-        </table>
+      <a href="#"
+        ><i
+          class="fa fa-2x fa-bars menu-toggle"
+          id="menu"
+          aria-hidden="true"
+        ></i
+      ></a>
+      <ul class="nav" id="nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="ExpenditureReport.html">Expenditure Report</a></li>
+
+        <li>
+          <a href="#">Ministry Info</a>
+          <ul>
+            <li><a href="#" class="">Ministry Report</a></li>
+            <li><a href="#" class="">Ministry Profile Search</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Company Info</a>
+          <ul>
+            <li><a href="companyprojects.html" class="">Company Report</a></li>
+            <li>
+              <a href="companyprofile.html" class="">Comapny Profile Search</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Reference</a>
+          <ul>
+            <li>
+              <a href="quickContacts.html" class=""
+                >Government Twitter Handles
+              </a>
+            </li>
+            <li><a href="contact.html" class="">Contact Us</a></li>
+            <li><a href="#" class="">About Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <div class="ministry_title">Ministries Report</div>
+    <div class="hero">
+      <img
+        class="hero-img"
+        src="https://user-images.githubusercontent.com/54963460/85075373-012b4a80-b1b6-11ea-88c4-b9ba4cfd22a0.png"
+      />
+      <div class="hero-text">
+        <h1>Ministry Expenditure Report</h1>
+        <p>
+          The government awards funds to ministries for their functions. Use our
+          Ministries ExpendiureProfile to get a better understanding of how
+          ministries spend congressional funding to carry out their programs,
+          projects, and activities.
+        </p>
       </div>
     </div>
-  </div>
-  <!--=========================Ending of Ministry list section========================-->
+    <div class="expenditure_graph_body">
+      <div class="expenditure_graph_title">
+        Graph Representation of Top 10 Ministry Expenditure
+      </div>
+      <div class="expenditure_graph">
+        <canvas id="graph_canvas"></canvas>
+        <div class="graph_filter">
+          <span>Filter</span><i class="fa fa-filter"></i>
+        </div>
+        <div class="graph_Xaxis_title">
+          Top 10 Ministries With Most Expenditure
+        </div>
+        <div class="graph_Yaxis_title">Amount Expenditure (Millions)</div>
+        <div class="graph_date">20th May 2020</div>
+      </div>
+      <div class="graph_Xaxis_container">
+        <ul class="graph_Xaxis">
+          <li style="background: #1f2430;"></li>
+          <li style="background: #6765ec;"></li>
+          <li style="background: #42e8e0;"></li>
+          <li style="background: #2196c4;"></li>
+          <li style="background: #005d3b;"></li>
+          <li style="background: #004583;"></li>
+          <li style="background: #ff0000;"></li>
+          <li style="background: #bc0a0a;"></li>
+          <li style="background: #9eff00;"></li>
+          <li style="background: #423e85;"></li>
+        </ul>
+      </div>
+
+      <div class="list_plotted">
+        <p>Key</p>
+        <div class="list_box">
+          <div style="background: #1f2430;"></div>
+          <p>Ministry of Education</p>
+        </div>
+      </div>
+    </div>
+
+    <!--=========================begining of Ministry list section========================-->
+    <div class="ministry_list_body">
+      <div class="ministry_list_table">
+        <div class="table_title_container">
+          <div class="table_name">Ministry Expenditure</div>
+          <div class="filter_section">
+            <p>20th May 2020</p>
+            <div class="table_filter">
+              <span>Filter</span><i class="fa fa-filter"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <table class="main_table">
+            <tr class="ministry_list_table_header">
+              <th>Ministry</th>
+              <th>Minister</th>
+              <th>Twitter</th>
+              <th>Amount</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="main-footer-wrapper">
+        <div class="main-box1">
+          <div class="brand-logo"><img src="img/logo.png" /><br /></div>
+          <div class="twitter">
+            <img src="img/twitter-logo.png" />
+            <a href="#">@expenseng</a>
+          </div>
+        </div>
+        <div class="main-box2">
+          <div class="box1">
+            <h4>About Us</h4>
+            <a href="#">About Expenseng.com</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="box2">
+            <h4>Pages</h4>
+            <a href="#">Home</a>
+            <a href="#">Daily Payment Report</a>
+            <a href="#">Companies</a>
+            <a href="#">Ministry</a>
+          </div>
+        </div>
+      </div>
+      <div class="last-footer">
+        <ul>
+          <li><a href="#">Accessibility |</a></li>
+          <li><a href="#">&nbspPrivacy Policy |</a></li>
+          <li><a href="#">&nbspFreedom of Information Act</a></li>
+          <li class="push">
+            <a href="#">&#169; 2020 EXPENSENG.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!--=========================Ending of Ministry list section========================-->
     <!--<script>
       $(document).ready(function () {
         $("#myInput").on("keyup", function () {
@@ -102,5 +201,5 @@
       });
     </script>-->
     <script type="text/javascript" src="js/ministry_expenditure.js"></script>
-</body>
+  </body>
 </html>
