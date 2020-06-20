@@ -174,11 +174,7 @@ let button = document.querySelector("#High-to-low")
 let all = document.querySelector("#all")
 
 function myFunction(value) {
-  if(value == 'all') {   
-     chart.data.datasets[0].data  = newData
-     chart.update()
-
- } else if(value == 'highLow') {
+  if(value == 'highLow') {
     chart.data.datasets[0].data = newData.sort((a, b) => {return a - b})
     chart.update()
     return
@@ -188,6 +184,11 @@ function myFunction(value) {
     return
 
  }
+}
+
+all = () => {   
+     chart.data.datasets[0].data  = newData
+     chart.update()
 }
 
 // Close the dropdown menu if the user clicks outside of it
